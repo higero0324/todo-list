@@ -4,9 +4,25 @@
 
 **制作時間: 16時間**
 
+## 📖 開発の経緯
+
+高専祭での一大プロジェクト「**雪村ウタ**」のLive2D制作を通じて、このアプリは誕生しました。
+
+キャラクターデザインから立ち絵制作、そしてLive2Dモデリングまで、膨大なタスクを抱えながら制作を進める中で、「**VTuber制作に特化したタスク管理ツール**」の必要性を痛感しました。表情差分は何パターン作ったか、物理演算のパラメータ値はどう設定したか、参考資料のURLはどこに保存したか――制作の途中で何度も混乱し、Excel や手書きメモの限界に直面しました。
+
+「もっと直感的に、もっと楽しく、もっとVTuber制作に寄り添ったツールが欲しい！」
+
+そんな思いから生まれたのが、この **VTuber Assist ToDo** です。16種類の専用エディター、ドラッグ&ドロップによる優先順位管理、そして可愛いパステルデザインで、制作過程そのものを楽しい体験に変えることを目指しました。雪村ウタの制作で得た「現場の声」を詰め込んだ、VTuberクリエイターのための、VTuberクリエイターによる、究極のタスク管理アプリです。
+
 ## 概要
 
-VTuberの制作工程（キャラデザ → 立ち絵 → Live2D）を効率的に管理するためのToDoリストアプリです。各工程に特化した専用エディターを搭載し、複数キャラクターの並行制作をサポートします。
+**VTuber Assist ToDo** は、VTuberの制作工程（キャラデザ → 立ち絵 → Live2D）を**完全管理**するための次世代ToDoリストアプリケーションです。
+
+従来の汎用タスク管理ツールでは対応しきれなかった「**Live2Dの物理演算パラメータ管理**」「**表情差分の進捗チェック**」「**参考資料URLの一元管理**」など、VTuber制作特有のニーズに完全対応。各工程に最適化された**16種類の専用エディター**を搭載し、複数キャラクターの並行制作も楽々サポートします。
+
+プロジェクトの全体像を俯瞰しながら、細部まで緻密に管理できる――それが **VTuber Assist ToDo** の真髄です。制作の「今」を可視化し、次の一手を明確にし、完成への道のりを最短距離で導きます。
+
+もう二度と「あのパラメータ、いくつだったっけ？」と迷うことはありません。あなたの創造力を、**最高の形**で現実にするためのアシスタントがここにあります。
 
 ### 主な機能
 
@@ -23,42 +39,40 @@ VTuberの制作工程（キャラデザ → 立ち絵 → Live2D）を効率的�
 - 💾 **自動保存**: LocalStorageで進捗を永続化
 - 🌸 **激かわデザイン**: パステルカラーとグラデーションで制作を明るい気分で！！
 
-## セットアップ
+## GitHub Pagesでのデプロイ
 
-### 1. 依存関係のインストール
+このアプリは **https://higero0324.github.io/todo-list/** で公開されています。
 
-```cmd
-npm install
-```
+### デプロイ手順
 
-### 2. 開発サーバーの起動
+1. **依存関係のインストール**
+   ```bash
+   npm install
+   ```
 
-**方法A: prefixオプションで起動（推奨・どこからでも実行可能）**
-```cmd
-npm run --prefix "c:\Users\shitt\Documents\programing3\todo-list" dev
-```
+2. **GitHubにコミット&プッシュ**
+   ```bash
+   git add .
+   git commit -m "Update app"
+   git push
+   ```
 
-**方法B: フォルダに移動してから起動**
-```cmd
-cd c:\Users\shitt\Documents\programing3\todo-list
+3. **GitHub Pagesへデプロイ**
+   ```bash
+   npm run deploy
+   ```
+
+4. **GitHub Pagesの設定**（初回のみ）
+   - GitHubリポジトリの `Settings` → `Pages` に移動
+   - Source を `gh-pages` ブランチに設定
+   - 数分後に https://higero0324.github.io/todo-list/ でアクセス可能になります
+
+### ローカルでの開発（オプション）
+
+```bash
 npm run dev
 ```
-
-起動後、ブラウザで **http://localhost:5173/** を開いてください。
-
-### 3. 本番ビルド
-
-```cmd
-npm run --prefix "c:\Users\shitt\Documents\programing3\todo-list" build
-```
-
-ビルド結果は `dist/` フォルダに出力されます。
-
-### 4. ビルド結果のプレビュー
-
-```cmd
-npm run --prefix "c:\Users\shitt\Documents\programing3\todo-list" preview
-```
+ブラウザで http://localhost:5173/ を開いてください。
 
 ## 使い方
 
@@ -194,7 +208,7 @@ todo-list/
 
 ## 開発コマンド
 
-```cmd
+```bash
 # 依存関係のインストール
 npm install
 
@@ -204,13 +218,8 @@ npm run dev
 # 本番用ビルド
 npm run build
 
-# ビルド結果のプレビュー
-npm run preview
-
-# (オプション) prefixを使った実行
-npm run --prefix "フルパス" dev
-npm run --prefix "フルパス" build
-npm run --prefix "フルパス" preview
+# GitHub Pagesへデプロイ
+npm run deploy
 ```
 
 ## 今後の拡張アイデア
