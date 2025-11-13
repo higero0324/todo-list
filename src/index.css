@@ -378,16 +378,26 @@ input[type="checkbox"] {
 .expand-btn {
   padding: 6px 10px;
   font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.6);
-  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
+  font-weight: 600;
+}
+
+.expand-btn:hover {
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(158, 212, 255, 0.3);
 }
 
 .expand-btn.expanded {
   background: var(--secondary);
   color: white;
+  border-color: var(--secondary);
 }
 
 /* Palette editor */
@@ -497,20 +507,29 @@ input[type="checkbox"] {
 .delete-char-btn {
   padding: 6px 8px;
   font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.6);
-  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
+  font-weight: 600;
+}
+
+.delete-char-btn {
+  border-color: var(--danger);
+  color: var(--danger);
 }
 
 .edit-char-btn:hover {
   background: var(--secondary);
+  color: white;
   transform: scale(1.1);
 }
 
 .delete-char-btn:hover {
   background: var(--danger);
+  color: white;
   transform: scale(1.1);
 }
 
@@ -630,16 +649,20 @@ input[type="checkbox"] {
 .edit-btn {
   padding: 6px 10px;
   font-size: 0.85rem;
-  background: rgba(255, 255, 255, 0.6);
-  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--accent);
+  color: var(--accent);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
+  font-weight: 600;
 }
 
 .edit-btn:hover {
-  background: var(--secondary);
+  background: var(--accent);
+  color: white;
   transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 158, 199, 0.3);
 }
 
 .title {
